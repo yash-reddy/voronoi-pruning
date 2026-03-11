@@ -1,0 +1,3 @@
+[submodule "expts/colbert"]
+	path = expts/colbert
+	url = https://github.com/stanford-futuredata/ColBERT

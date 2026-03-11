@@ -1,0 +1,11 @@
+# Enable all rules
+default: true
+
+# Disable rules that conflict with Prettier
+# See https://github.com/DavidAnson/markdownlint/blob/main/doc/Prettier.md
+extends: markdownlint/style/prettier
+
+# Allow duplicate headings if they are not siblings
+# See https://github.com/DavidAnson/markdownlint/blob/main/doc/md024.md
+no-duplicate-heading:
+  siblings_only: true

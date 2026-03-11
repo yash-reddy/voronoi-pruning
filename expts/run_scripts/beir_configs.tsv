@@ -1,0 +1,11 @@
+DATASET_NAME	QUERIES	COLLECTION	INDEX_NAME	OUTPUT_FILENAME	N_CHUNKS
+climate_fever	data/downloads/beir/climate-fever/queries.tsv	data/downloads/beir/climate-fever/docs.tsv	climate_fever.2bits	climate_fever.2bits.output	11
+dbpedia_entity	data/downloads/beir/dbpedia-entity/test/queries.tsv	data/downloads/beir/dbpedia-entity/test/docs.tsv	dbpedia_entity.2bits	dbpedia_entity.2bits.output	9
+fiqa	data/downloads/beir/fiqa/test/queries.tsv	data/downloads/beir/fiqa/test/docs.tsv	fiqa.2bits	fiqa.2bits.output	1
+nfcorpus	data/downloads/beir/nfcorpus/test/queries.tsv	data/downloads/beir/nfcorpus/test/docs.tsv	nfcorpus.2bits	nfcorpus.2bits.output	1
+nq	data/downloads/beir/nq/queries.tsv	data/downloads/beir/nq/docs.tsv	nq.2bits	nq.2bits.output	10
+quora	data/downloads/beir/quora/test/queries.tsv	data/downloads/beir/quora/test/docs.tsv	quora.2bits	quora.2bits.output	1
+scidocs	data/downloads/beir/scidocs/queries.tsv	data/downloads/beir/scidocs/docs.tsv	scidocs.2bits	scidocs.2bits.output	1
+scifact	data/downloads/beir/scifact/test/queries.tsv	data/downloads/beir/scifact/test/docs.tsv	scifact.2bits	scifact.2bits.output	1
+trec_covid	data/downloads/beir/trec-covid/queries.tsv	data/downloads/beir/trec-covid/docs.tsv	trec_covid.2bits	trec_covid.2bits.output	1
+webis_touche2020_v2	data/downloads/beir/webis-touche2020/v2/queries.tsv	data/downloads/beir/webis-touche2020/v2/docs.tsv	webis_touche2020_v2.2bits	webis_touche2020_v2.2bits.output	2
