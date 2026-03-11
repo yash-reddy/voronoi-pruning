@@ -1,10 +1,10 @@
 # Voronoi Pruning
 
-Voronoi Pruning is a principled token pruning method for late-interaction retrieval models. It formulates token importance via Voronoi cell removal error under a Monte Carlo approximation, providing a geometric criterion for identifying redundant token embeddings.
+Voronoi Pruning is a principled token pruning method for late-interaction retrieval models. It formulates token importance via Voronoi cell removal error under a Monte Carlo approximation, providing a geometric criterion for identifying redundant and low-importance token embeddings.
 
 This repository contains the official implementation of:
 
-[A Voronoi Cell Formulation for Principled Token Pruning in Late-Interaction Retrieval Models](TODO)
+[A Voronoi Cell Formulation for Principled Token Pruning in Late-Interaction Retrieval Models](https://arxiv.org/abs/2603.09933)
 
 ## Table of Contents
 
@@ -79,10 +79,18 @@ For detailed instructions on their setup and execution, please refer to the [exp
 
 ## Contact
 
-For questions regarding the implementation or experiments, please contact:
+For questions regarding the implementation or experiments, please contact: Yash or his academic supervisors Nadi and Joseph at {lastname}@lipn.fr, or Yuxuan or his academic supervisor Benjamin at (name).(surname)@isir.upmc.fr
 
 ## Citation
 
-```json
-TODO
+```
+@misc{kankanampati2026voronoicellformulationprincipled,
+      title={A Voronoi Cell Formulation for Principled Token Pruning in Late-Interaction Retrieval Models}, 
+      author={Yash Kankanampati and Yuxuan Zong and Nadi Tomeh and Benjamin Piwowarksi and Joseph Le Roux},
+      year={2026},
+      eprint={2603.09933},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR},
+      url={https://arxiv.org/abs/2603.09933}, 
+}
 ```
