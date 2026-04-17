@@ -10,7 +10,7 @@ PRUNING_RATIO="0.5"
 EXPERIMENT_NAME="laplace"
 
 # Read header and data
-tail -n +2 "$CONFIG_FILE" | while IFS=$'\t' read -r DATASET QUERIES COLLECTION INDEX_NAME OUTPUT_FILENAME N_CHUNKS; do
+tail -n +2 "$CONFIG_FILE" | while IFS=$'\t' read -r DATASET QUERIES COLLECTION INDEX_NAME OUTPUT_FILENAME N_CHUNKS QUERY_MAXLEN DOC_MAXLEN; do
   echo "=== Running on dataset: $DATASET ==="
 
   export QUERIES="$QUERIES"
@@ -21,6 +21,9 @@ tail -n +2 "$CONFIG_FILE" | while IFS=$'\t' read -r DATASET QUERIES COLLECTION I
   export EXPERIMENT_NAME="$EXPERIMENT_NAME"
   export OUTPUT_FILENAME="$OUTPUT_FILENAME"
   export N_CHUNKS="$N_CHUNKS"
+  export QUERY_MAXLEN="$QUERY_MAXLEN"
+  export DOC_MAXLEN="$DOC_MAXLEN"
+
 
   echo "Loaded variables:"
   echo "  DATASET=$DATASET"

@@ -44,6 +44,12 @@ def get_cli_args():
         help="Number of bits to encode each dimension (default: 2).",
     )
     parser.add_argument(
+        "--query-maxlen",
+        type=int,
+        default=32,
+        help="Truncate queries at this many tokens (default: 32).",
+    )
+    parser.add_argument(
         "--doc-maxlen",
         type=int,
         default=300,
@@ -90,7 +96,7 @@ def create_index(args, num_gpus):
     with Run().context(
         RunConfig(nranks=num_gpus, experiment=args.experiment_name)
     ):  # nranks specifies the number of GPUs to use.
-        config = ColBERTConfig(doc_maxlen=args.doc_maxlen, nbits=args.nbits)
+        config = ColBERTConfig(doc_maxlen=args.doc_maxlen, query_maxlen = args.query_maxlen, nbits=args.nbits)
         indexer = Indexer(checkpoint=args.checkpoint, config=config)
         indexer.index(name=args.index_name, collection=collection, overwrite="reuse")
     return indexer

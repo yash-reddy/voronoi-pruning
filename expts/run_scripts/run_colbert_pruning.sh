@@ -9,6 +9,8 @@ PRUNING_RATIO="${PRUNING_RATIO:-0.5}"
 EXPERIMENT_NAME="${EXPERIMENT_NAME:-laplace}"
 OUTPUT_FILENAME="${OUTPUT_FILENAME:-msmarco.dev.2bits.${PRUNING_RATIO}}"
 N_CHUNKS="${N_CHUNKS:-24}"
+QUERY_MAXLEN="${QUERY_MAXLEN:-32}"
+DOC_MAXLEN="${DOC_MAXLEN:-180}"
 PRUNE_ORDER_EXTRA_ARGS="${PRUNE_ORDER_EXTRA_ARGS:-}"
 PRUNE_INDEX_EXTRA_ARGS="${PRUNE_INDEX_EXTRA_ARGS:-}"
 
@@ -25,7 +27,9 @@ INDEX_JOBID=$(sbatch --parsable expts/run_scripts/index.slurm \
   "$CHECKPOINT" \
   "$INDEX_NAME" \
   "$EXPERIMENT_NAME" \
-  "$OUTPUT_FILENAME")
+  "$OUTPUT_FILENAME" \
+  "$QUERY_MAXLEN" \
+  "$DOC_MAXLEN")
 
 echo "$(timestamp) Indexing job submitted with Job ID: $INDEX_JOBID"
 echo "$(timestamp) Submitting pruning jobs (total chunks: $N_CHUNKS)"

@@ -18,6 +18,8 @@ CHECKPOINT=$3
 INDEX_NAME=$4
 EXPERIMENT_NAME=$5
 OUTPUT_FILENAME=$6
+QUERY_MAXLEN=$7
+DOC_MAXLEN=$8
 
 echo "EXECUTION START TIME: $(date)"
 
@@ -27,6 +29,8 @@ python -m expts.colbert_expts.index_collection \
   --checkpoint "$CHECKPOINT" \
   --index-name "$INDEX_NAME" \
   --experiment "$EXPERIMENT_NAME" \
-  --output-filename "$OUTPUT_FILENAME"
+  --output-filename "$OUTPUT_FILENAME" \
+  --query-maxlen "$QUERY_MAXLEN" \
+  --doc-maxlen "$DOC_MAXLEN"
 
 echo "COMPLETED INDEXING AT: $(date)"
