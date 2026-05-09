@@ -63,6 +63,8 @@ def get_prune_targets(
             use_relu=use_relu,
         )
     else:
+        if not iterative:
+            step_size = vvp_mask.shape[1] + 100
         return get_iterative_prune_targets(
             padded_matrix,
             vvp_mask,
